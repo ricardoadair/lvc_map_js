@@ -3,7 +3,8 @@ var router = require("./router");
 var requestHandlers = require("./requestHandlers");
 
 var handle = {}
-//handle["/"] = requestHandlers.select;
+
 handle["/select"] = requestHandlers.select;
+handle["/selectLast"] = requestHandlers.select;
 
 server.iniciar(router.route, handle);
